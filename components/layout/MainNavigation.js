@@ -4,7 +4,7 @@ import Link from "next/link";
 function MainNavigation() {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>I meetup</div>
+      <div className={classes.logo}>we meetup</div>
       <nav>
         <ul>
           <li>

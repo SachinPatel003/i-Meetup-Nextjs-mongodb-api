@@ -6,7 +6,7 @@ function HomePage(props) {
   return (
     <>
       <Head>
-        <title>my app</title>
+        <title>my meetup app</title>
         <meta name="description" content="the app build by NextJS"></meta>
       </Head>
       <MeetupList meetups={props.meetups} />;
@@ -24,7 +24,9 @@ function HomePage(props) {
 //   };
 // }
 export async function getStaticProps() {
-  const client = await MongoClient.connect("mongodb+srv://sachinpatel:RVxElQreeFu8I0La@cluster0.iku7vyp.mongodb.net/?retryWrites=true&w=majority");
+  const client = await MongoClient.connect(
+    "mongodb+srv://sachinpatel:RVxElQreeFu8I0La@cluster0.iku7vyp.mongodb.net/?retryWrites=true&w=majority"
+  );
   const db = client.db();
 
   const meetupsCollection = db.collection("sachinmeetups");
